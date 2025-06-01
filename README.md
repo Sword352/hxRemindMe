@@ -1,3 +1,3 @@
 ## hxRemindMe
 
-Run `haxe build.hxml` on a command prompt to compile.
+Run `haxelib install cpphelpers` and `haxe build.hxml` in a command prompt to compile.
