@@ -1,4 +1,4 @@
 -cp src
 -main Main
---macro Linker.includeNativeCode()
 -cpp bin/
+--library cpphelpers

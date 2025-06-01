@@ -1,0 +1,20 @@
+<xml>
+    <pragma once="true" />
+	<set name="PROJECT_DIR" value="${this_dir}/src" />
+    <files id="__main__">
+      <compilerflag value="-I${PROJECT_DIR}/include/" />
+    </files>
+
+    <files id="haxe">
+        <compilerflag value="-I${PROJECT_DIR}/include/" />
+    </files>
+
+    <files id="toast">
+        <compilerflag value="-I${PROJECT_DIR}/include/" />
+        <file name="${PROJECT_DIR}/include/NativeToastUtil.cpp" />
+    </files>
+
+    <target id="haxe">
+        <files id="toast" />
+    </target>
+</xml>

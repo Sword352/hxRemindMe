@@ -1,8 +1,10 @@
 package;
 
-@:cppInclude("NativeToastUtil.cpp")
-class ToastUtil {
-    public static function showToast(title: String, header: String, message: String): Void {
-        untyped show_toast(untyped title.wchar_str(), untyped header.wchar_str(), untyped message.wchar_str());
-    }
+import cpp.ConstWCharTStar;
+
+@:buildXml('<include name="../../build.xml" />')
+@:include("NativeToastUtil.cpp")
+extern class ToastUtil {
+	@:native("show_toast")
+	static function showToast(title:ConstWCharTStar, header:ConstWCharTStar, message:ConstWCharTStar):Void;
 }
