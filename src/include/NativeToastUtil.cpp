@@ -13,7 +13,7 @@ using namespace ABI::Windows::UI::Notifications;
 #pragma comment(lib, "runtimeobject.lib")
 
 extern "C" __declspec(dllexport)
-void show_toast(const wchar_t* title, const wchar_t* header, const wchar_t* message) {
+inline void show_toast(const wchar_t* title, const wchar_t* header, const wchar_t* message) {
     RoInitializeWrapper initialize(RO_INIT_MULTITHREADED);
     if (FAILED(initialize)) return;
 
